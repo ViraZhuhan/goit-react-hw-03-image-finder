@@ -7,7 +7,6 @@ import Searchbar from './Searchbar';
 import ImageGallery from './ImageGallery';
 import { Container } from './App.styled';
 
-
 export default class App extends Component {
   state = {
     searchQuery: '',
@@ -24,14 +23,14 @@ export default class App extends Component {
 
     return (
       <Container>
+        <ToastContainer autoClose={3000} theme={'colored'} />
         <Searchbar onSubmit={this.handleChangeSearchQuery} />
-        <ToastContainer autoClose={5000} theme={'colored'} />
-        <ImageGallery searchQuery={searchQuery} />     
+        <ImageGallery searchQuery={searchQuery} />
       </Container>
     );
   }
 }
 
 App.propTypes = {
-  searchQuery: PropTypes.string
-}
+  searchQuery: PropTypes.string,
+};

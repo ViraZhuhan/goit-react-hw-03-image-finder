@@ -17,6 +17,7 @@ export default class Searchbar extends Component {
 
   handleSumbit = e => {
     e.preventDefault();
+
     if (this.state.searchQuery.trim() === '') {
       return toast.error('Please enter the query!');
     }

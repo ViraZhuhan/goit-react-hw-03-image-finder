@@ -51,15 +51,8 @@ class ImageGallery extends Component {
     try {
       const data = await getHits({ searchQuery, perPage, page });
 
-      if (searchQuery === '') {
-        this.setState(setState => ({
-          hits: [...setState.hits],
-        }));
-        return toast.error('Please enter the query!');
-      }
-
       if (data.hits.length === 0) {
-        throw Error(`No matches found with "${this.props.searchQuery}"`);
+        return toast.error(`No matches found with "${this.props.searchQuery}"`);
       }
 
       this.setState(prevState => ({
@@ -70,7 +63,7 @@ class ImageGallery extends Component {
       }));
     } catch (error) {
       this.setState({ status: STATUS.REJECTED });
-      return toast.error(error.message);
+      return toast.error(`No matches found with "${this.props.searchQuery}"`);
     }
   };
 
