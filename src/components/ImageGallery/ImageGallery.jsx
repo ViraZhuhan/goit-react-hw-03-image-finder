@@ -52,7 +52,7 @@ class ImageGallery extends Component {
       const data = await getHits({ searchQuery, perPage, page });
 
       if (data.hits.length === 0) {
-        return toast.error(`No matches found with "${this.props.searchQuery}"`);
+       throw Error(`No matches found with "${searchQuery}"`);
       }
 
       this.setState(prevState => ({
@@ -63,7 +63,7 @@ class ImageGallery extends Component {
       }));
     } catch (error) {
       this.setState({ status: STATUS.REJECTED });
-      return toast.error(`No matches found with "${this.props.searchQuery}"`);
+      toast.error(error.message);
     }
   };
 

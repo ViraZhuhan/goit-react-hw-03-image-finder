@@ -23,7 +23,7 @@ export default class App extends Component {
 
     return (
       <Container>
-        <ToastContainer autoClose={3000} theme={'colored'} />
+        <ToastContainer position="top-left" autoClose={3000} theme={'colored'} />
         <Searchbar onSubmit={this.handleChangeSearchQuery} />
         <ImageGallery searchQuery={searchQuery} />
       </Container>
