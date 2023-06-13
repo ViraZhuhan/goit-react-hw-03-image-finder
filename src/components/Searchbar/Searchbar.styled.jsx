@@ -1,10 +1,9 @@
-import styled from "@emotion/styled";
+import styled from '@emotion/styled';
 
 export const Header = styled.header`
-top: 0;
+  top: 0;
   left: 0;
-  position: fixed;
-  width: 100%;
+  position: sticky;
   z-index: 1100;
   display: flex;
   justify-content: center;
@@ -18,25 +17,24 @@ top: 0;
   background-color: #3f51b5;
   box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
     0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
-`
+`;
 
 export const SearchForm = styled.form`
-display: flex;
+  display: flex;
   align-items: center;
   width: 100%;
   max-width: 600px;
   background-color: #fff;
   border-radius: 3px;
   overflow: hidden;
-` 
+`;
 
 export const SearchButton = styled.button`
-position: relative;
-display: inline-block;
+  position: relative;
+  display: inline-block;
   width: 48px;
   height: 48px;
   border: 0;
-  background-image: url('https://image.flaticon.com/icons/svg/149/149852.svg');
   background-size: 40%;
   background-repeat: no-repeat;
   background-position: center;
@@ -55,11 +53,10 @@ display: inline-block;
     width: 24px;
     height: 24px;
   }
-
-`
+`;
 
 export const ButtonLabel = styled.span`
-position: absolute;
+  position: absolute;
   width: 1px;
   height: 1px;
   padding: 0;
@@ -68,10 +65,10 @@ position: absolute;
   white-space: nowrap;
   clip-path: inset(50%);
   border: 0;
-`
+`;
 
 export const Input = styled.input`
-display: inline-block;
+  display: inline-block;
   width: 100%;
   font: inherit;
   font-size: 20px;
@@ -84,5 +81,4 @@ display: inline-block;
     font: inherit;
     font-size: 18px;
   }
-`
-
+`;

@@ -9,7 +9,6 @@ import {
   ButtonLabel,
   Input,
 } from './Searchbar.styled';
-import ErrorMessage from 'components/ErrorMessage/ErrorMessage';
 
 export default class Searchbar extends Component {
   state = {
@@ -34,7 +33,7 @@ export default class Searchbar extends Component {
   };
 
   render() {
-       return (
+    return (
       <Header>
         <SearchForm onSubmit={this.handleSumbit}>
           <SearchButton type="submit">
@@ -53,3 +52,7 @@ export default class Searchbar extends Component {
     );
   }
 }
+
+Searchbar.propTypes = {
+  searchQuery: PropTypes.string,
+};

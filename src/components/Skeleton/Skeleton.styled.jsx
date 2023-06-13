@@ -1,5 +1,5 @@
-import { keyframes } from "@emotion/react";
-import styled from "@emotion/styled";
+import { keyframes } from '@emotion/react';
+import styled from '@emotion/styled';
 
 const skeletonAnimation = keyframes`
   0% {
@@ -11,26 +11,27 @@ const skeletonAnimation = keyframes`
 `;
 
 export const SkeletonList = styled.ul`
-display: grid;
-max-width: calc(100vw - 48px);
-grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
-grid-gap: 16px;
-margin-top: 0;
-margin-bottom: 0;
-padding: 0;
-list-style: none;
-margin-left: auto;
-margin-right: auto;
+  display: grid;
+  max-width: calc(100vw - 48px);
+  grid-template-columns: repeat(auto-fill, minmax(320px, 1fr));
+  grid-gap: 16px;
+  margin-top: 0;
+  margin-bottom: 0;
+  padding: 0;
+  list-style: none;
+  margin-left: auto;
+  margin-right: auto;
 
-@media (min-width: 768px) {
+  @media (min-width: 768px) {
     grid-template-columns: repeat(2, minmax(320px, 1fr));
-}
-@media (min-width: 1200px) {
-    grid-template-columns: repeat(3, minmax(320px, 1fr));
-}
-`
+  }
+  @media (min-width: 1200px) {
+    grid-template-columns: repeat(4, minmax(320px, 1fr));
+  }
+`;
 export const SkeletonCard = styled.li`
-  width: 300px;
+  width: 100%;
+  height: 260px;
   background: #fff;
   border-radius: 5px;
   padding: 25px 15px;
@@ -39,7 +40,6 @@ export const SkeletonCard = styled.li`
   .image {
     position: relative;
     width: 100%;
-    height: 260px;
     object-fit: cover;
     overflow: hidden;
     border-top-left-radius: 5px;

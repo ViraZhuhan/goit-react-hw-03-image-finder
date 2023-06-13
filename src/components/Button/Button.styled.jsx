@@ -1,22 +1,27 @@
 import styled from '@emotion/styled';
 
 export const LoadMoreButton = styled.button`
-display: block;
 margin: 0 auto;
-  padding: 0.375rem 0.75rem;
-  background-color: #3f51b5;
-  color: #ffffff;
-  font-size: 0.875rem;
-  line-height: 1.25rem;
-  font-weight: 600;
-  justify-content: center;
-  width: 100px;
-  border-radius: 0.375rem;
-  border: none;
-  box-shadow: 0 1px 2px 0 rgba(0, 0, 0, 0.05);
+padding: 8px 16px;
+border-radius: 2px;
+background-color: #3f51b5;
+transition: all 250ms cubic-bezier(0.4, 0, 0.2, 1);
+text-align: center;
+display: inline-block;
+color: #fff;
+border: 0;
+text-decoration: none;
+cursor: pointer;
+font-family: inherit;
+font-size: 18px;
+line-height: 24px;
+font-style: normal;
+font-weight: 500;
+width: 180px;
+box-shadow: 0px 3px 1px -2px rgba(0, 0, 0, 0.2),
+  0px 2px 2px 0px rgba(0, 0, 0, 0.14), 0px 1px 5px 0px rgba(0, 0, 0, 0.12);
 
-  :hover {
-    background-color: #6366f1;
-  }
-  }
+:hover,:focus {
+background-color: #303f9f;
+}
 `
