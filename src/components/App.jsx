@@ -85,7 +85,7 @@ export default class App extends Component {
         <ToastContainer autoClose={3000} theme={'colored'} />
         <Searchbar onSubmit={this.handleChangeSearchQuery} />
         {status === STATUS.PENDING && <Skeleton />}
-        {status === STATUS.RESOLVED && <ImageGallery hits={hits} />}
+        {hits.length > 0 && <ImageGallery hits={hits} />}
         {showLoadMoreButton && (
           <Button
             onClick={this.handleLoardMore}
